@@ -1,0 +1,52 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <stdlib.h>
+#include<time.h>
+using namespace std;
+int main() 
+{
+    // Write C++ code here
+
+
+    srand(time(0));
+    int a;
+    int m;
+    cout<<"Enter 1 for easy , Enter 2 for intermidiate , Enter 3 for Hard and any other key to exit "<<endl;
+    cin>>m;
+    while(m==1 || m==2 || m==3)
+    {
+        if(m==1)
+        {
+            a=rand()%10+1;
+            cout<<"you are playing in easy mode, guess the number from 1 to 10"<<endl;
+        }
+        else if(m==2){
+            a=rand()%100+1;
+            cout<<"you are playing in intermidiate  mode, guess the numbers from 1 to 100"<<endl;
+        }
+        else{
+            a=rand()%1000+1;
+            cout<<"you are playing in hard mode, guess the numbers from 1 to 1000"<<endl;
+        }
+        
+        int n;
+        cout<<"choose a number ";cin>>n;
+    
+        while(n!=a){
+            if(n<a){
+                cout<<"number guessed is low"<<endl;
+            }
+            else{
+                cout<<"number guessed is high"<<endl;
+            }
+            cout<<"choose again ";
+            cin>>n;
+        }
+        cout<<"Congratulations you got the correct number"<<endl;
+        
+        cout<<"Enter 1 for easy , Enter 2 for intermidiate , Enter 3 for Hard and any other key to exit"<<endl;
+        cin>>m;
+    }
+    
+    return 0;
+}
